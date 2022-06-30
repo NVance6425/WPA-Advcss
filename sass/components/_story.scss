@@ -1,0 +1,85 @@
+.story {
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    background-color: rgba($color-blue-dark, .6);
+    border-radius: 3px;
+    padding: 6rem;
+    padding-left: 9rem;
+    font-size: $default-font-size;
+    clip-path: polygon(100% 0%,90% 50%,100% 100%,0% 100%,10% 50%,0% 0%);
+    color: $color-whitesmoke;
+
+    &__shape {
+        width: 25rem;
+        height: 25rem;
+        float: left;
+        transform: translateX(6rem);
+        position: relative;
+        overflow: hidden;
+        border-radius: 10%;
+
+    }
+
+    &__img {
+        height: 100%;
+        transform: scale(1.4);
+        backface-visibility: hidden;
+    }
+
+    &__text {
+        width: 80%;
+        transform: translateX(8rem);
+        text-shadow: $color-black 1px 1px;
+    }
+
+    &__video {
+        transform: translateX(15%);
+    }
+
+    &__map {
+        position: relative;
+
+        &--old, 
+        &--new {
+            width: 80%;
+            transform: translateX(5rem);
+
+            &:hover {
+                filter: blur(3px) brightness(80%);
+            }
+        }
+
+        &--new {
+            width: 80%;
+            transform: translateX(1rem);
+
+            &:hover {
+                filter: blur(3px) brightness(80%);
+            }
+        }
+    }
+
+    &__map-text {
+        pointer-events: none;
+        @include absCenter;
+        color: $color-black;
+        text-shadow: $color-grey-dark-2 1px 1px;
+        opacity: 0;
+        font-size: 3rem;
+        text-align: center;
+
+        &--old {
+            transform: translate(-50%, -50%);
+        }
+
+        &--new {
+            transform: translate(-70%, -50%);
+        }
+    }
+
+    &__map:hover > &__map-text {
+        opacity: 1;
+    }
+}
+

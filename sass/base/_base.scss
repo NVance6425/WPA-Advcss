@@ -9,8 +9,16 @@
 html {
     //This defines what 1rem is
     font-size: 62.5%;
+
+    font-family: $default-font;
 }
 
 body {
     box-sizing: border-box;
+    background-image: url(../img/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 3rem;
 }

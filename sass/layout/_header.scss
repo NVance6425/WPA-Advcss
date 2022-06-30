@@ -1,0 +1,37 @@
+.header {
+    height: 90vh;
+    background-image: url(../img/Castle.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    transform: scale(0.9);
+
+
+    &__textbox-top {
+        
+        position: absolute;
+        top: 7%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        font-family: $font-cursive;
+        font-size: 10rem;
+        font-weight: 700;
+        color: $color-whitesmoke;
+        text-shadow: $color-black 2px 2px;
+    }
+
+    &__textbox-bottom {
+        
+        position: absolute;
+        bottom: -7%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        font-family: $font-cursive;
+        font-size: 12rem;
+        font-weight: 700;
+        color: $color-whitesmoke;
+        text-shadow: $color-black 2px 2px;
+    }
+}

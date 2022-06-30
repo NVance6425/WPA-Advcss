@@ -1,0 +1,159 @@
+.card {
+
+    //FUCTIONALITY
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    transform: translateX(25%);
+    height: 50rem;
+    background-color: transparent;
+    width: 75rem;
+
+    &__side {
+        height: 50rem;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+        &--front {
+            background-color: $color-black;
+        }
+
+        &--back {
+            transform: rotateY(180deg);
+            background-image: linear-gradient(to right bottom, $color-blue-light 10%, $color-blue-dark 100%);
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0deg);
+    }
+
+
+
+    //FRONT SIDE STYLING
+    &__picture {
+        background-size: cover;
+        height: 50rem;
+        background-blend-mode: screen;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+
+        &--1 {
+            background-image: url(../img/main.png);
+            background-position: center;
+        }
+
+        &--2 {
+            background-image: url(../img/adventure.png);
+        }
+
+        &--3 {
+            background-image: url(../img/frontier.jpg);
+        }
+
+        &--4 {
+            background-image: url(../img/fantasy.jpg);
+        }
+
+        &--5 {
+            background-image: url(../img/tomorrow.jpg);
+        }
+
+        &--6 {
+            background-image: url(../img/neworleans.jpg);
+        }
+
+        &--7 {
+            background-image: url(../img/critter.jpg);
+        }
+
+        &--8 {
+            background-image: url(../img/toontown.jpg);
+        }
+
+        &--9 {
+            background-image: url(../img/galaxy.jpg);
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-align: right;
+        color: $color-white;
+        position: absolute;
+        bottom: 5rem;
+        right: 2rem;
+        width: 75%;
+    }
+
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+
+        background-image: linear-gradient(to right bottom, 
+            rgba( $color-blue-light, .85), 
+            rgba( $color-blue-dark, .85));
+    }
+
+    
+    //BACK SIDE STYLING
+    &__info,
+    &__attractions {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    &__attractions {
+        z-index: 100;
+        background-image: linear-gradient(to right bottom, 
+            rgba( $color-blue-light, 1), 
+            rgba( $color-blue-dark, 1));
+        height: 50rem;
+        width: 110%;
+        pointer-events: none;
+        opacity: 0;  // See _button.scss for opacity change
+
+        &--list {
+            @include absCenter;
+            text-align: center;
+            text-decoration: none;
+            list-style: none;
+            font-size: 2rem;
+
+            &-smalltext {
+                font-size: 1.6rem;
+            }
+
+        }
+
+        &--para {
+            width: 20%;
+        }
+    }
+
+    &__description {
+        text-align: center;
+        color: $color-white;
+        margin-bottom: 8rem;
+
+    }
+
+}
