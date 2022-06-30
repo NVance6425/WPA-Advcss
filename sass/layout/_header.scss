@@ -10,15 +10,35 @@
     &__textbox-top {
         
         position: absolute;
-        top: 7%;
+        top: 20%;
         left: 50%;
         transform: translate(-50%, -50%);
 
         font-family: $font-cursive;
-        font-size: 10rem;
+        font-size: 6rem;
         font-weight: 700;
         color: $color-whitesmoke;
         text-shadow: $color-black 2px 2px;
+
+        @include respond(tab-land) {
+            font-size: 8rem;
+            top: 15%
+        }
+    
+        @include respond(tab-port) {
+            font-size: 6rem;
+            top: 15%
+        }
+
+        @include respond(tab-port) {
+            font-size: 6rem;
+            top: 15%
+        }
+
+        @include respond(big-desktop) {
+            font-size: 10rem;
+            top: 15%
+        }
     }
 
     &__textbox-bottom {
@@ -33,5 +53,15 @@
         font-weight: 700;
         color: $color-whitesmoke;
         text-shadow: $color-black 2px 2px;
+
+        @include respond(tab-land) {
+            font-size: 10rem;
+        }
+    
+        @include respond(tab-port) {
+            font-size: 8rem;
+        }
     }
+
+    
 }
